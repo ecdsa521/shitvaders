@@ -127,7 +127,7 @@ func (game *gameData) checkBomb() {
 	minX := game.player.x - 65
 	maxX := game.player.x + 65
 
-	if game.bomb.active && game.bomb.x >= minX && game.bomb.x <= maxX && game.bomb.y <= 100 {
+	if game.bomb.active && game.bomb.x >= minX && game.bomb.x <= maxX && game.bomb.y <= 100 && game.bomb.y >= 50 {
 		game.bomb.active = false
 		game.started = false
 	}
